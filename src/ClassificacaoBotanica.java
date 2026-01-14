@@ -1,0 +1,7 @@
+public enum ClassificacaoBotanica {
+    BRIOFITA,
+    PTERIDOFITA,
+    GIMNOSPERMA,
+    ANGIOSPERMA_MONOCOTILEDONEA,
+    ANGIOSPERMA_DICOTILEDONEA
+}
