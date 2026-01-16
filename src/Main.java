@@ -7,7 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         CatalogoBotanico catalogo = new CatalogoBotanico();
 
-        System.out.println("=== SISTEMA DE CLASSIFICAÇÃO BOTÂNICA ===\n");
+        System.out.println("=== sistema de classificação botânica ===\n");
 
         System.out.print("A planta possui vasos condutores (raiz e caule)? (s/n): ");
         boolean vasos = sc.nextLine().equalsIgnoreCase("s");
@@ -41,7 +41,7 @@ public class Main {
             }
         }
 
-        System.out.println("\n--- PLANTAS QUE SE ENCAIXAM NA CLASSIFICAÇÃO ---");
+        System.out.println("\n--- Plantas que se encaixam na classificação ---");
         boolean encontrou = false;
 
         for (Planta p : catalogo.getPlantas()) {
