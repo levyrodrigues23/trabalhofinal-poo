@@ -7,9 +7,7 @@ public class Especie extends Planta {
     @Override
     public void exibirFicha() {
         System.out.println(
-                "Planta: " + getNomePopular() +
-                        " | Bioma: " + getBioma() +
-                        " | Classificação: " + getClassificacao()
+                "Planta: " + getNomePopular() + " | Bioma: " + getBioma() + " | Classificação: " + getClassificacao()
         );
     }
 }

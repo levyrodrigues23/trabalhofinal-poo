@@ -9,12 +9,12 @@ public class Main {
 
         System.out.println("=== sistema de classificação botânica ===\n");
 
-        System.out.print("A planta possui vasos condutores (raiz e caule)? (s/n): ");
-        boolean vasos = sc.nextLine().equalsIgnoreCase("s");
+        System.out.print("A planta é vascular(possui raiz, folhas e caule)? (s/n): ");
+        boolean vascular = sc.nextLine().equalsIgnoreCase("s");
 
         ClassificacaoBotanica classificacaoFinal;
 
-        if (!vasos) {
+        if (!vascular) {
             classificacaoFinal = ClassificacaoBotanica.BRIOFITA;
         } else {
             System.out.print("A planta possui sementes? (s/n): ");
@@ -23,30 +23,41 @@ public class Main {
             if (!sementes) {
                 classificacaoFinal = ClassificacaoBotanica.PTERIDOFITA;
             } else {
-                System.out.print("As sementes ficam protegidas por frutos? (s/n): ");
+                System.out.print("As plantas produzem frutos? (s/n): ");
                 boolean frutos = sc.nextLine().equalsIgnoreCase("s");
 
                 if (!frutos) {
                     classificacaoFinal = ClassificacaoBotanica.GIMNOSPERMA;
-                } else {
-                    System.out.print("Quantos cotilédones a semente possui? (1 ou 2): ");
-                    int cotiledones = Integer.parseInt(sc.nextLine());
+                } else{
+                    System.out.print("As plantas contém espinhos? (s/n): ");
+                    boolean espinhos = sc.nextLine().equalsIgnoreCase("s");
+                    if (!espinhos) {
+                        classificacaoFinal = ClassificacaoBotanica.ANGIOSPERMA;
+                    } else{
+                        classificacaoFinal = ClassificacaoBotanica.ANGIOSPERMA_ESPINHO;
+                    }
 
-                    if (cotiledones == 1) {
-                        classificacaoFinal = ClassificacaoBotanica.ANGIOSPERMA_MONOCOTILEDONEA;
-                    } else {
-                        classificacaoFinal = ClassificacaoBotanica.ANGIOSPERMA_DICOTILEDONEA;
                     }
                 }
             }
+
+        if(classificacaoFinal == ClassificacaoBotanica.BRIOFITA){
+            System.out.println("\n--- Plantas que pertencem a classificacao " + classificacaoFinal.toString() + " ---");
+        } else if(classificacaoFinal == ClassificacaoBotanica.PTERIDOFITA){
+            System.out.println("\n--- Plantas que pertencem a classificacao " + classificacaoFinal.toString() + " ---");
+        } else if(classificacaoFinal == ClassificacaoBotanica.ANGIOSPERMA){
+            System.out.println("\n--- Plantas que pertencem a classificacao " + classificacaoFinal.toString() + " ---");
+        } else if(classificacaoFinal == ClassificacaoBotanica.ANGIOSPERMA_ESPINHO) {
+            System.out.println("--- Plantas que pertencem a classificacao  " + classificacaoFinal.toString() + " ---");
+        } else{
+            System.out.println("--- Plantas que pertencem a classificação GIMNOSPERMAS ---");
         }
 
-        System.out.println("\n--- Plantas que se encaixam na classificação ---");
         boolean encontrou = false;
 
-        for (Planta p : catalogo.getPlantas()) {
-            if (p.getClassificacao() == classificacaoFinal) {
-                p.exibirFicha();
+        for (Planta planta : catalogo.getPlantas()) {
+            if (planta.getClassificacao() == classificacaoFinal) {
+                planta.exibirFicha();
                 encontrou = true;
             }
         }

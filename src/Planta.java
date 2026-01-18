@@ -4,6 +4,7 @@ public abstract class Planta {
     private String bioma;
     private ClassificacaoBotanica classificacao;
 
+
     public Planta(String nomePopular, String bioma, ClassificacaoBotanica classificacao) {
         this.nomePopular = nomePopular;
         this.bioma = bioma;
@@ -11,14 +12,17 @@ public abstract class Planta {
     }
 
     public String getNomePopular() {
+
         return nomePopular;
     }
 
     public String getBioma() {
+
         return bioma;
     }
 
     public ClassificacaoBotanica getClassificacao() {
+
         return classificacao;
     }
 
