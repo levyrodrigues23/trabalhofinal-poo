@@ -15,6 +15,7 @@ public class Main {
         ClassificacaoBotanica classificacaoFinal;
 
         if (!vascular) {
+
             classificacaoFinal = ClassificacaoBotanica.BRIOFITA;
         } else {
             System.out.print("A planta possui sementes? (s/n): ");

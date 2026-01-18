@@ -11,49 +11,49 @@ public class CatalogoBotanico {
     }
 
     private void popularCatalogo() {
-        // --- BRIÓFITAS (Plantas sem vasos condutores, dependem de muita umidade) ---
-        plantas.add(new Especie("Musgo-de-Turfeira (Sphagnum)", "Brejos úmidos", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Musgo-Cabelo-de-Vênus", "Matas de galeria", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Hepática-folhosa", "Troncos de árvores úmidos", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Hepática-de-crista", "Solo sombreado", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Musgo-bola", "Rochas úmidas", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Antócero-liso", "Margens de riachos", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Musgo-tapete", "Folhiço de floresta", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Musgo", "Brejos de altitude", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Hepática", "Brejos de altitude", ClassificacaoBotanica.BRIOFITA));
-        plantas.add(new Especie("Antócero", "Áreas úmidas", ClassificacaoBotanica.BRIOFITA));
 
-        // --- PTERIDÓFITAS (Têm vasos, mas não têm sementes. Reprodução por esporos) ---
-        plantas.add(new Especie("Renda-portuguesa", "Cultivo/Ornamental", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Chifre-de-veado", "Epífita (em árvores)", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Selaginela (Musgo-da-ressurreição)", "Rochas da Caatinga", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Cavalinha", "Zonas ricas em água", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Licopódio", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Samambaia-paulistinha", "Encostas sombreadas", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Avencão", "Matas ciliares", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Samambaia-de-metro", "Cultivo/Suspenso", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Samambaia-prata", "Interiores de florestas", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Samambaia", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Avenca", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA));
-        plantas.add(new Especie("Xaxim", "Brejos", ClassificacaoBotanica.PTERIDOFITA));
-
-        // --- GIMNOSPERMAS (Têm vasos e sementes, mas a semente é 'nua', sem fruto) ---
-        plantas.add(new Especie("Araucária (Pinheiro-do-Paraná)", "Serras de altitude (Clima frio)", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Cica (Sagu-de-jardim)", "Cultivo/Jardins", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Ginkgo biloba", "Cultivo (Uso medicinal)", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Pinheiro-negro", "Áreas de reflorestamento", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Junípero", "Cultivo/Ornamental", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Pinheiro-manso", "Zonas temperadas de cultivo", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Cedro-do-Líbano", "Cultivo especializado", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Teixo", "Jardins botânicos", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Podocarpo", "Cercas vivas/Jardins", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Pinheiro", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Cipreste", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA));
-        plantas.add(new Especie("Tuia", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA));
-
-        // ========== ANGIOSPERMAS ==========
-
-        // --- PALMEIRAS (Sem espinhos no tronco) ---
+        plantas.add(new Briofita("Musgo-de-Turfeira (Sphagnum)", "Brejos úmidos", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, true));
+        plantas.add(new Briofita("Musgo-Cabelo-de-Vênus", "Matas de galeria", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.TRONCO, false));
+        plantas.add(new Briofita("Hepática-folhosa", "Troncos de árvores úmidos", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.TRONCO, false));
+        plantas.add(new Briofita("Hepática-de-crista", "Solo sombreado", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, false));
+        plantas.add(new Briofita("Musgo-bola", "Rochas úmidas", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.ROCHA, false));
+        plantas.add(new Briofita("Antócero-liso", "Margens de riachos", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, true));
+        plantas.add(new Briofita("Musgo-tapete", "Folhiço de floresta", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, false));
+        plantas.add(new Briofita("Musgo", "Brejos de altitude", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, true));
+        plantas.add(new Briofita("Hepática", "Brejos de altitude", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, true));
+        plantas.add(new Briofita("Antócero", "Áreas úmidas", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, true));
+        plantas.add(new Briofita("Musgo-estrela", "Rochas de serra", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.ROCHA, false));
+        plantas.add(new Briofita("Hepática-terrestre", "Solo de floresta", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.SOLO, false));
+        plantas.add(new Briofita("Musgo-pendente", "Galhos de árvores", ClassificacaoBotanica.BRIOFITA, SubstratoBriofita.TRONCO, false));
+        plantas.add(new Pteridofita("Renda-portuguesa", "Cultivo/Ornamental", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Chifre-de-veado", "Epífita (em árvores)", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.EPIFITA, true));
+        plantas.add(new Pteridofita("Selaginela (Musgo-da-ressurreição)", "Rochas da Caatinga", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.RUPESTRE, false));
+        plantas.add(new Pteridofita("Cavalinha", "Zonas ricas em água", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.AQUATICA, false));
+        plantas.add(new Pteridofita("Licopódio", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Samambaia-paulistinha", "Encostas sombreadas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Avencão", "Matas ciliares", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Samambaia-de-metro", "Cultivo/Suspenso", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.EPIFITA, true));
+        plantas.add(new Pteridofita("Samambaia-prata", "Interiores de florestas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Samambaia", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Avenca", "Serras úmidas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Xaxim", "Brejos", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Samambaia-açu", "Matas fechadas", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Samambaia-imperial", "Jardins sombreados", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Pteridofita("Nephrolepis (samambaia-paulista)", "Cultivo", ClassificacaoBotanica.PTERIDOFITA, CrescimentoPteridofita.TERRESTRE, true));
+        plantas.add(new Gimnosperma("Araucária (Pinheiro-do-Paraná)", "Serras de altitude (Clima frio)", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Cica (Sagu-de-jardim)", "Cultivo/Jardins", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.COMPOSTA, false));
+        plantas.add(new Gimnosperma("Ginkgo biloba", "Cultivo (Uso medicinal)", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.LEQUE, false));
+        plantas.add(new Gimnosperma("Pinheiro-negro", "Áreas de reflorestamento", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Junípero", "Cultivo/Ornamental", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.ESCAMA, true));
+        plantas.add(new Gimnosperma("Pinheiro-manso", "Zonas temperadas de cultivo", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Cedro-do-Líbano", "Cultivo especializado", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Teixo", "Jardins botânicos", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Podocarpo", "Cercas vivas/Jardins", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Pinheiro", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Cipreste", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.ESCAMA, true));
+        plantas.add(new Gimnosperma("Tuia", "Cultivo", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.ESCAMA, true));
+        plantas.add(new Gimnosperma("Sequoia", "Cultivo especializado", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
+        plantas.add(new Gimnosperma("Pinheiro-do-brejo", "Áreas úmidas", ClassificacaoBotanica.GIMNOSPERMA, TipoFolhaGimnosperma.AGULHA, true));
         plantas.add(new Angiosperma("Carnaúba", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
         plantas.add(new Angiosperma("Babaçu", "Mata de Cocais", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
         plantas.add(new Angiosperma("Buriti", "Mata de Cocais", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
@@ -62,8 +62,6 @@ public class CatalogoBotanico {
         plantas.add(new Angiosperma("Licuri", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
         plantas.add(new Angiosperma("Dendê", "Litoral", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
         plantas.add(new Angiosperma("Inajá", "Mata de Cocais", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.PALMEIRA));
-
-        // --- ERVAS/MATO (Cultivos e plantas herbáceas) ---
         plantas.add(new Angiosperma("Milho", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
         plantas.add(new Angiosperma("Capim-elefante", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
         plantas.add(new Angiosperma("Bananeira", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
@@ -74,8 +72,6 @@ public class CatalogoBotanico {
         plantas.add(new Angiosperma("Mandioca", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
         plantas.add(new Angiosperma("Algodão-herbáceo", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
         plantas.add(new Angiosperma("Amendoim", "Agricultura", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ERVA));
-
-        // --- ÁRVORES "ARMADAS" DA CAATINGA (Com Espinhos) ---
         plantas.add(new Angiosperma("Juazeiro", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Angico", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Catingueira", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
@@ -88,8 +84,6 @@ public class CatalogoBotanico {
         plantas.add(new Angiosperma("Ximenia americana (Umbu-cajá)", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Pereiro", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Jurema-branca", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.ARVORE));
-
-        // --- CACTOS E BROMÉLIAS (Sempre com Espinhos) ---
         plantas.add(new Angiosperma("Mandacaru", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
         plantas.add(new Angiosperma("Mandacaru-branco", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
         plantas.add(new Angiosperma("Xique-xique", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
@@ -101,8 +95,6 @@ public class CatalogoBotanico {
         plantas.add(new Angiosperma("Cabeça-de-frade", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
         plantas.add(new Angiosperma("Quipá", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
         plantas.add(new Angiosperma("Rabo-de-raposa", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA_ESPINHO, true, TipoPlanta.CACTO));
-
-        // --- ÁRVORES LISAS (Sem Espinhos) ---
         plantas.add(new Angiosperma("Umbuzeiro", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Aroeira", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ARVORE));
         plantas.add(new Angiosperma("Pau-branco", "Caatinga", ClassificacaoBotanica.ANGIOSPERMA, false, TipoPlanta.ARVORE));
@@ -135,4 +127,5 @@ public class CatalogoBotanico {
         return plantas;
     }
 }
+
 
